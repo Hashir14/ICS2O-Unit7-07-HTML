@@ -19,26 +19,26 @@ function multiply () {
   // Setting the sign to false helps multiply the negative numbers later on in the code.
   sign = false
 
-  // If the input1 value, or the value stored in factor1 is less than 0, then switch the sign from flase to true, making it a positive. Otherwise, skip this step and carry on.
+  // If the input1 value, or the value stored in factor1 is less than 0, then switch the sign from false to true, making it a positive. Otherwise, skip this step and carry on.
   if (factor1 < 0) {
     sign = !sign
-    // Math.abs, or absolute, takes the absolute value of the integer, meaning its distance of from 0, making all signs redundant, for the sake of calculating the numbers.
+    // Math.abs, or absolute, takes the absolute value of the integer, meaning its distance from 0, making all signs redundant, for the sake of calculating the numbers.
     factor1 = Math.abs(factor1)
   }
 
   // If input2 value, or the value stored in factor2 is less than 0, then switch the sign from false to true, making it positive. Otherwise, skip this step and carry on.
   if (factor2 < 0) {
     sign = !sign
-    // Math.abs will take the absolute value of the number use it for the calculations.
+    // Math.abs will take the absolute value of the number and use it for the calculations.
     factor2 = Math.abs(factor2)
   }
-  // This where the actual multiplicaion will happen via repeated addition. This loop will keep happening until the value stored in factor1 is greater than the counter, which will keep track of the number of loops, and will start at 0. Everytime the loop is complete, the counter will increase by one.
+  // This where the actual multiplication will happen via repeated addition. This loop will keep happening until the value stored in factor1 is greater than the counter, which will keep track of the number of loops, and will start at 0. Every time the loop is complete, the counter will increase by one.
 
   for (counter = 0; counter < factor1; counter++) {
-    // Everytime the loop restarts, take the answer from the previous loop and add it to the value stored in factor2.
+    // Every time the loop restarts, take the answer from the previous loop and add it to the value stored in factor2.
     answer = answer + factor2
   }
-  // If either one or both of the if statements before were carried out, then instead of adding the multiplied absolute values to 0, subtract them so that the final answer will be negative, only if one or both if the if statements above were true, meanigng that if either one the values stored in either one of the factor variables was negative.
+  // If either one or both of the if statements before were carried out, then instead of adding the multiplied absolute values to 0, subtract them from 0 so that the final answer will be negative, only if one or both of the if statements above were true, meaning that if either one of the values stored in either one of the factor variables was negative.
   if (sign) {
     answer = 0 - answer
   }
