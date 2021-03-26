@@ -9,7 +9,7 @@ let answer = 0
 let sign = false
 
 function multiply () {
-  // Stores what was put in the input elements with the id in the red. Then, stores their value in the variable on the left of the equal sign. 
+  // Stores what was put in the input elements with the id in the red. Then, stores their value in the variable on the left of the equal sign.
   factor1 = document.getElementById('input1').value
   factor2 = document.getElementById('input2').value
   // Uses input as integers as opposed to characters.
@@ -22,7 +22,7 @@ function multiply () {
   // If the input1 value, or the value stored in factor1 is less than 0, then switch the sign from flase to true, making it a positive. Otherwise, skip this step and carry on.
   if (factor1 < 0) {
     sign = !sign
-    // Math.abs, or absolute, takes the absolute value of the integer, meaning its distance of from 0, making all signs redundant, for the sake of calculating the numbers. 
+    // Math.abs, or absolute, takes the absolute value of the integer, meaning its distance of from 0, making all signs redundant, for the sake of calculating the numbers.
     factor1 = Math.abs(factor1)
   }
 
@@ -38,11 +38,10 @@ function multiply () {
     // Everytime the loop restarts, take the answer from the previous loop and add it to the value stored in factor2.
     answer = answer + factor2
   }
-  
-  // If either one or both of the if statements before were carried out, then instead of adding the multiplied absolute values to 0, subtract them so that the final answer will be negative, only if one or both if the if statements above were true, meanigng that if either one the values stored in either one of the factor variables was negative. 
+  // If either one or both of the if statements before were carried out, then instead of adding the multiplied absolute values to 0, subtract them so that the final answer will be negative, only if one or both if the if statements above were true, meanigng that if either one the values stored in either one of the factor variables was negative.
   if (sign) {
     answer = 0 - answer
   }
-    // Finally display the answer in the paragraph element with id 'product'.
-    document.getElementById('product').innerHTML = answer
+  // Finally display the answer in the paragraph element with id 'product'.
+  document.getElementById('product').innerHTML = answer
 }
