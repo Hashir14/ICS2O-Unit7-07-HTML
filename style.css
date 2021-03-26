@@ -1,0 +1,29 @@
+.title {
+  text-align: center;
+  text-decoration: underline;
+}
+
+.text {
+  font-size: 200%;
+  text-align: center;
+}
+
+#button {
+  margin-left: 630px;
+}
+
+#input2 {
+  margin-left: 560px;
+}
+
+#input1 {
+  margin-left: 560px;
+}
+
+#product {
+  text-align: center;
+}
+
+#times {
+  margin-left: 650px;
+}
